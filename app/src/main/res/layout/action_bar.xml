@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#01DDC4"
+    android:minHeight="?attr/actionBarSize"
+    app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark"
+    app:titleTextColor="#000000"
+    android:id="@+id/action_bar"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="𝓟𝓮𝓽𝓪𝓰𝓻𝓪𝓶"
+        android:textSize="22sp">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/tresBotones"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="#00FFFFFF"
+        tools:src="@drawable/icons8_menu_vertical_100">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/estrellita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        tools:src="@drawable/icons8_hotel_96"
+        android:layout_gravity = "right"
+        >
+
+    </ImageButton>
+
+</androidx.appcompat.widget.Toolbar>
