@@ -5,11 +5,16 @@ import java.io.Serializable;
 public class Mascota implements Serializable {
 
     private int fotoCachorro;
-    private int tipoDeHueso;
+    private int tipoDeHueso = R.drawable.icons8_dog_bone_401;
     private String nombreDelCachorro;
     private  String cantidadDeLikes;
-    private int fotoHuesoDorado;
+    private int fotoHuesoDorado  = R.drawable.icons8_dog_bone_400;
     private int tipoDeHuesolikes = 0;
+    private int id;
+
+
+    public Mascota (){}
+
 
     public Mascota (int fotoCachorro,String cantidadDeLikes){
 
@@ -76,5 +81,13 @@ public class Mascota implements Serializable {
 
     public void setTipoDeHuesolikes(int tipoDeHuesolikes) {
         this.tipoDeHuesolikes = tipoDeHuesolikes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,5 +1,6 @@
 package ActivityMain;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +21,12 @@ public class adaptador_Mascotas extends RecyclerView.Adapter <adaptador_Mascotas
 
 
     private ArrayList <Mascota> mascotas;
+    private Activity activity;
 
-
-    public adaptador_Mascotas (ArrayList<Mascota> mascotas){
+    public adaptador_Mascotas (ArrayList<Mascota> mascotas ,  Activity activity){
 
         this.mascotas = mascotas;
+        this.activity = activity;
 
     }
 
@@ -50,18 +52,21 @@ public class adaptador_Mascotas extends RecyclerView.Adapter <adaptador_Mascotas
 
                 Mascota mascota1  = mascotas.get(position);
                 if(mascota.getTipoDeHuesolikes() == 0){
+                    mascota.setTipoDeHueso(R.drawable.icons8_dog_bone_401);
+                    mascota.setTipoDeHuesolikes(0);
+                    int aux = Integer.parseInt( mascota.getCantidadDeLikes());
+                    aux --;
+                    mascota.setCantidadDeLikes(Integer.toString(aux));
+
+                } else {
+
                     mascota.setTipoDeHueso(R.drawable.icons8_dog_bone_400);
                     mascota.setTipoDeHuesolikes(1);
                     int aux = Integer.parseInt( mascota.getCantidadDeLikes());
                     aux ++;
                     mascota.setCantidadDeLikes(Integer.toString(aux));
 
-                } else {
-                    mascota.setTipoDeHueso(R.drawable.icons8_dog_bone_401);
-                    mascota.setTipoDeHuesolikes(0);
-                    int aux = Integer.parseInt( mascota.getCantidadDeLikes());
-                    aux --;
-                    mascota.setCantidadDeLikes(Integer.toString(aux));
+
                 }
                 holder.fotoTipoDeHueso.setImageResource(mascota.getTipoDeHueso());
                 holder.cantidadDeLikes.setText(mascota.getCantidadDeLikes());
